@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Admission Page">
+
+    <title>Pickpack | Courier Portal</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JS -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom Styles-->
+    <link href="css/recordform.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+<div class="container">
+    <div class="auth-form-body">
+        <div class="text-center">
+            <img src="img/tick_mark_icon.png" width="70px" height="70px"><br>
+        </div>
+            <div class="overlay-itro"></div>
+            <div class="intro-content display-table">
+                <div class="table-cell">
+                    <div class="container">
+                        <h1 class="intro-title mb-4">Welcome to PickPack</h1>
+                        <div align="center">
+                            <form class="form-signin" id="findrecord" action="/findrecord" method="get" enctype="multipart/form-data">
+                                <div class="form-label-group">
+                                    <input type="text" id="track_id" name="track_id" class="form-control"
+                                           placeholder="Enter ID" autofocus required>
+                                    <label for="track_id">Enter ID To Check</label>
+                                    <button class="btn btn-primary btn-block mt-4" type="submit">Check</button>
+                                    <div style="color:#00ff43" th:text="${find}" ></div>
+                                </div>
+                            </form>
+
+
+                            <a href = "/login"><button class="btn btn-primary btn-block mt-4" type="submit">SIGN IN</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

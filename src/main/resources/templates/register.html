@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:form="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/recordform.css" rel="stylesheet">
+    <title>Admin Signup</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="auth-form-body">
+
+        <form class="form-signin" id="registerform" action="/register" method="post"
+              enctype="multipart/form-data">
+            <h1 class="intro-title mb-4">Add Admin</h1>
+
+            <div class="form-label-group">
+                <input type="text" id="username" name="username" class="form-control"
+                       placeholder="User Name" autofocus required />
+                <label for="username">New User Name</label>
+            </div>
+            <div class="form-label-group">
+                <input type="password" id="password" name="password" class="form-control"
+                       placeholder="Password" data-rule="minlen:8" data-msg="Please enter at least 8 chars of password" required />
+                <label for="password">New Password</label>
+            </div>
+            <div class="form-label-group">
+                <input type="password" id="special" name="special" class="form-control"
+                       placeholder="Root Password" />
+                <label for="special">Root Password</label>
+            </div>
+            <div style="color:#00ff43" th:text="${success}"></div>
+            <div style="color:#00ff43" th:text="${wrongroot}"></div>
+            <div style="color:#00ff43" th:text="${userexists}"></div>
+            <button class="btn btn-primary btn-block mt-4" type="submit">Create Admin</button>
+        </form>
+        <a href = "/index">
+        <button class="btn btn-primary btn-block mt-4" type="submit">Return Home</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>
+

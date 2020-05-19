@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/recordform.css" rel="stylesheet">
+    <title>Update Record</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="auth-form-body">
+
+            <h1 class="intro-title mb-4">Record Details</h1>
+            <div class="form-label-group">
+                <input type="number" id="item_no" name="item_no" class="form-control"
+                       placeholder="Item Number" th:value = "${r.item_no}" autofocus required disabled/>
+                <label for="item_no">Item_no</label>
+            </div>
+
+            <div class="form-label-group">
+                <input type="date" id="date" name="date" class="form-control"
+                       placeholder="date" th:value = "${r.date}" autofocus required disabled/>
+                <label for="date">Date</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="track_id" name="track_id" class="form-control"
+                       placeholder="Track ID" th:value = "${r.track_id}" autofocus required disabled/>
+                <label for="track_id">Track ID</label>
+            </div>
+            
+            <div class="form-label-group">
+                <input type="text" id="name" name="name" class="form-control"
+                       placeholder="User Name" th:value = "${r.name}" autofocus required disabled/>
+                <label for="name" >User Name</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="comp_name" name="comp_name" class="form-control"
+                       placeholder="Company Name" th:value = "${r.comp_name}" autofocus required disabled/>
+                <label for="comp_name" >Company Name</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="remark" name="remark" class="form-control"
+                       placeholder="Remark" th:value = "${r.remark}" autofocus required disabled/>
+                <label for="remark">Remarks</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="status" name="status" class="form-control"
+                       placeholder="status" th:value = "${r.status}" autofocus required disabled/>
+                <label for="status" >Status</label>
+            </div>
+
+            <a href = "/index">
+                <button class="btn btn-primary btn-block mt-4"  type="submit" >RETURN</button>
+            </a>
+    </div>
+</div>
+</body>
+</html>

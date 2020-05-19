@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/recordform.css" rel="stylesheet">
+    <title>Add Record</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="auth-form-body">
+
+        <form class="form-signin" id="recordtable" action="/createrecord" method="post"
+              enctype="multipart/form-data">
+            <h1 class="intro-title mb-4">Add Record</h1>
+
+            <div class="form-label-group">
+                <input type="text" id="track_id" name="track_id" class="form-control"
+                       placeholder="Track ID" autofocus required />
+                <label for="track_id">Track ID</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="name" name="name" class="form-control"
+                       placeholder="User Name" autofocus required />
+                <label for="name">User Name</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="comp_name" name="comp_name" class="form-control"
+                       placeholder="Company Name" autofocus required />
+                <label for="comp_name">Company Name</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="remark" name="remark" class="form-control"
+                       placeholder="Remark" autofocus required />
+                <label for="remark">Remarks</label>
+            </div>
+            <button class="btn btn-primary btn-block mt-4" type="submit">Create Record</button>
+        </form>
+        
+    </div>
+</div>
+</body>
+</html>
+
