@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-import static com.sun.activation.registries.LogSupport.log;
+
 
 @RestController
 public class AddRecordController {

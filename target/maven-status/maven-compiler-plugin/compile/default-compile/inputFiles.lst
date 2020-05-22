@@ -1,0 +1,13 @@
+/home/crux/manage_parcel/src/main/java/com/courier/registration/RegisterController.java
+/home/crux/manage_parcel/src/main/java/com/courier/login/LoginController.java
+/home/crux/manage_parcel/src/main/java/com/courier/RecordTable/RecordTableService.java
+/home/crux/manage_parcel/src/main/java/com/courier/ParcelManageApplication.java
+/home/crux/manage_parcel/src/main/java/com/courier/login/LoginTable.java
+/home/crux/manage_parcel/src/main/java/com/courier/AddRecord/AddRecordService.java
+/home/crux/manage_parcel/src/main/java/com/courier/login/LoginService.java
+/home/crux/manage_parcel/src/main/java/com/courier/RecordTable/RecordTable.java
+/home/crux/manage_parcel/src/main/java/com/courier/registration/RegisterService.java
+/home/crux/manage_parcel/src/main/java/com/courier/RecordTable/RecordTableController.java
+/home/crux/manage_parcel/src/main/java/com/courier/RecordTable/RecordTableRepository.java
+/home/crux/manage_parcel/src/main/java/com/courier/AddRecord/AddRecordController.java
+/home/crux/manage_parcel/src/main/java/com/courier/login/LoginRepository.java

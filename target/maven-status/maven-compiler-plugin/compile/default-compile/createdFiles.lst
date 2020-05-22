@@ -1,0 +1,13 @@
+com/courier/AddRecord/AddRecordController.class
+com/courier/ParcelManageApplication.class
+com/courier/login/LoginService.class
+com/courier/RecordTable/RecordTableRepository.class
+com/courier/login/LoginController.class
+com/courier/registration/RegisterController.class
+com/courier/login/LoginRepository.class
+com/courier/RecordTable/RecordTableService.class
+com/courier/registration/RegisterService.class
+com/courier/AddRecord/AddRecordService.class
+com/courier/RecordTable/RecordTableController.class
+com/courier/login/LoginTable.class
+com/courier/RecordTable/RecordTable.class
