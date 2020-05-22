@@ -53,7 +53,13 @@
                        placeholder="status" th:value = "${r.status}" autofocus required />
                 <label for="status" >Status</label>
             </div>
-                                
+            <div class="form-label-group">
+                <input type="text" id="number" name="number" class="form-control"
+                       placeholder="Phone Number" th:value = "${r.number}" autofocus required readonly="readonly"/>
+                <label for="number">Phone Number</label>
+            </div>
+
+
             <button class="btn btn-primary btn-block mt-4" type="submit">Update</button>
         </form>
         

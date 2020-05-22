@@ -33,11 +33,22 @@ public class RecordTable {
     @Column(name = "Status")
     private String status;
 
+    @Column(name = "Contact")
+    private  String number;
+
     @Column(name = "Date")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Temporal(TemporalType.DATE)
     private Date date;
 
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
     @PrePersist
     void onCreate()
@@ -49,13 +60,14 @@ public class RecordTable {
     public RecordTable() {
     }
 
-    public RecordTable(@NotNull String track_id, @NotNull String name, @NotNull String comp_name, String remark, String status, Date date) {
+    public RecordTable(@NotNull String track_id, @NotNull String name, @NotNull String comp_name, String remark, String status, Date date,String number) {
         this.track_id = track_id;
         this.name = name;
         this.comp_name = comp_name;
         this.remark = remark;
         this.status = status;
         this.date = date;
+        this.number = number;
     }
 
     public Long getItem_no() {

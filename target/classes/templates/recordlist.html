@@ -31,7 +31,8 @@
             <th>Company Name</th>
             <th>Remarks</th>
             <th>Status</th>
-            <th>Date</th>            
+            <th>Date</th>
+            <th>Phone Number</th>
         </tr >
 
         <tr th:each="r : ${record}">
@@ -42,6 +43,7 @@
             <td th:text="${r.remark}"></td>
             <td th:text="${r.status}"></td>
             <td th:text="${r.date}"></td>
+            <td th:text="${r.number}"></td>
         </tr>	
         </thead>
         <tbody></tbody>

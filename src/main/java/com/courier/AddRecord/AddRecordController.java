@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -26,7 +30,12 @@ public class AddRecordController {
     @Autowired
     RecordTableRepository recordRepo;
 
+    private final static String ACCOUNT_SID = "ACa4076e76cc2f8d7c427a83d04997ee83";
+    private final static String AUTH_ID = "89002ff61afb9605752d23b23a10252f";
 
+    static {
+        Twilio.init(ACCOUNT_SID, AUTH_ID);
+    }
     //update record
     @RequestMapping(value = {"/updaterecord"}, method = RequestMethod.GET)
     public ModelAndView update_record(String track_id ,RedirectAttributes redir){
@@ -75,7 +84,11 @@ public class AddRecordController {
         if (reslist !=null) {
             redir.addFlashAttribute("create", "Record Already Exists");
         }
+
         else {
+
+            Message.creator(new PhoneNumber(recordEntity.getNumber()), new PhoneNumber("+18605796966"),
+                    "\nHello "+recordEntity.getName()+",\nYour order with track id \"" +recordEntity.getTrack_id()+"\" has been recieved at the Institute Reception. Please collect. \nRegards!").create();
             recordService.createRecord(recordEntity);
             redir.addFlashAttribute("create", "Record Added");
         }
