@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  mysql-standalone:
+    image: mysql:latest
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=parcel
+      - MYSQL_USER=newuser
+      - MYSQL_PASSWORD=Vyomaudi@2312
+  central-hub-container:
+    image: manage_parcel-1.0.jar
+    ports:
+      - 8090:8090
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql-standalone
+
