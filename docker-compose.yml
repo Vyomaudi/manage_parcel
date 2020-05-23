@@ -21,4 +21,6 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - mysql-standalone
+    db:
+      condition: service_healthy  
 
