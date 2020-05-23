@@ -15,11 +15,11 @@ services:
   central-hub-container:
     image: manage_parcel-1.0.jar
     ports:
-      - 8090:8090
+      - 7555:7555
     build:
       context: ./
       dockerfile: Dockerfile
     depends_on:
-      mysql-standalone:
-        condition: service_healthy  
+      - mysql-standalone
+     
 
