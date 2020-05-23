@@ -10,6 +10,8 @@ services:
       - MYSQL_DATABASE=parcel
       - MYSQL_USER=newuser
       - MYSQL_PASSWORD=Vyomaudi@2312
+    healthcheck:
+      test:  mysql --user=root --password=password -e  
   central-hub-container:
     image: manage_parcel-1.0.jar
     ports:
