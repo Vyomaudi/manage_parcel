@@ -30,13 +30,13 @@ public class AddRecordController {
     @Autowired
     RecordTableRepository recordRepo;
 
-    private final static String ACCOUNT_SID = "ACa4076e76cc2f8d7c427a83d04997ee83";
-    private final static String AUTH_ID = "89002ff61afb9605752d23b23a10252f";
+   // private final static String ACCOUNT_SID = "ENTER_your_SID";
+   // private final static String AUTH_ID = "ENTER_your_AUTHID";
 
-    static {
-        Twilio.init(ACCOUNT_SID, AUTH_ID);
-    }
-    //update record
+   // static {
+   //    Twilio.init(ACCOUNT_SID, AUTH_ID);
+   //}
+   //update record
     @RequestMapping(value = {"/updaterecord"}, method = RequestMethod.GET)
     public ModelAndView update_record(String track_id ,RedirectAttributes redir){
         if((recordRepo.find_id_tracking_id(track_id))!=null) {
@@ -87,9 +87,10 @@ public class AddRecordController {
 
         else {
 
-            Message.creator(new PhoneNumber(recordEntity.getNumber()), new PhoneNumber("+18605796966"),
-                    "\nHello "+recordEntity.getName()+",\nYour order with track id \"" +recordEntity.getTrack_id()+"\" has been recieved at the Institute Reception. Please collect. \nRegards!").create();
-            recordService.createRecord(recordEntity);
+            //Message.creator(new PhoneNumber(recordEntity.getNumber()), new PhoneNumber("+18166312074"),
+            //            "\nHello " + recordEntity.getName() + ",\nYour order with track id \"" + recordEntity.getTrack_id() + "\" has been recieved at the Institute Reception. Please collect. \nRegards!").create();
+
+           recordService.createRecord(recordEntity);
             redir.addFlashAttribute("create", "Record Added");
         }
         return model;
